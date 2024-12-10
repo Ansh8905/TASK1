@@ -1,0 +1,10 @@
+
+Design an nodejs application to fetch data from a public API eg:   https://catfact.ninja/fact  
+
+1. The function should return a Promise that resolves with the fetched data.
+
+2. Implement retry logic for handling rate-limiting errors. If the API responds with a rate-limiting error (HTTP status code 429), the function should wait for a certain period (e.g., 5 seconds) and then retry the request.
+        
+3. Implement a maximum retry count (e.g., 3 retries). If the maximum retry count is reached and the rate-limiting error persists, the function should reject the Promise with an appropriate error message.
+
+4. Once the data is successfully fetched from the API, store it in MySQL  database and also export into csv.
